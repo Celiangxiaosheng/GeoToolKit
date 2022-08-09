@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>venus.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="image\geo.jpg" />
+    <None Remove="image\geodesty.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="image\geo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="venus.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="image\geodesty.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="E:\previous2021.12.26\大三上课程\测量程序设计\上课源代码\12.16\GaussProj2021.12.16\GaussProj\GaussProj.csproj" />
+    <ProjectReference Include="E:\previous2021.12.26\大三上课程\测量程序设计\上课源代码\12.16\GaussProj2021.12.16\SurMath\SurMath.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Image.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Image.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Image.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Image.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
